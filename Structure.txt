@@ -1,0 +1,11 @@
+REACT PORTFOLIO STRUCTURE: 
+
+- APP 
+  - NavBar
+  - Start / Intro 
+  - Portfolio 
+      - PortfolioItem
+      - Divider
+  - About 
+  - Footer 
+	
