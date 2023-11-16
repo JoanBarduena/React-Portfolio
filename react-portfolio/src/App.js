@@ -1,9 +1,9 @@
-import PortfolioItem from "./components/portfolios/PortfolioItem.js";
+import AllPortfolios from "./components/AllPortfolios.js";
 
 function App() {
   return (
     <div>
-      <PortfolioItem text="The Witcher" />
+      <AllPortfolios />
     </div>
   );
 }
