@@ -10,7 +10,7 @@ function App() {
           <Route path="/" element={<AllPortfolios />} />
           <Route
             path="/:title"
-            element={<ProjectPage portfolioData={PORTFOLIO_DATA} />}
+            element={<ProjectPage projectData={PORTFOLIO_DATA} />}
           />
         </Routes>
       </Router>

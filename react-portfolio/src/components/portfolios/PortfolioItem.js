@@ -12,7 +12,7 @@ function PortfolioItem(props) {
         <div className={classes.info}>
           <div>{props.subtitle}</div>
           <div className={classes.inline}>
-            <div>2020</div>
+            <div>{props.year}</div>
             <div>{props.category}</div>
           </div>
         </div>
@@ -26,7 +26,7 @@ function PortfolioItem(props) {
         <div className={classes.info}>
           <div></div>
           <Link
-            to={`/${encodeURIComponent(props.title.replace(/%20/g, "-"))}`}
+            to={`/${encodeURIComponent(props.title.replace(/\s+/g, "-"))}`}
             className={classes.view}
           >
             View the project

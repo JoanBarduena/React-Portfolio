@@ -7,6 +7,8 @@ const PORTFOLIO_DATA = [
     title: "Stylized Medieval Village",
     subtitle: "First subtitle",
     category: "First category",
+    year: "2020",
+    teamSize: "3",
     image:
       "https://joanbarduena.github.io/portfolio/img/projects/portfolio_1.PNG",
     description: "This is a first portfolio description",
@@ -26,7 +28,10 @@ function AllPortfolios() {
           title={portfolio.title}
           subtitle={portfolio.subtitle}
           category={portfolio.category}
+          year={portfolio.year}
+          teamSize={portfolio.teamSize}
           image={portfolio.image}
+          description={portfolio.description}
         />
       ))}
     </section>
