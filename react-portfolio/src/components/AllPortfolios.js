@@ -4,7 +4,7 @@ import Container from "./layout/Container.js";
 const PORTFOLIO_DATA = [
   {
     id: "p1",
-    title: "This is a first portfolio",
+    title: "Stylized Medieval Village",
     subtitle: "First subtitle",
     category: "First category",
     image:
@@ -33,4 +33,4 @@ function AllPortfolios() {
   );
 }
 
-export default AllPortfolios;
+export { AllPortfolios, PORTFOLIO_DATA };

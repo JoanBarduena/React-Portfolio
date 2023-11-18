@@ -1,5 +1,5 @@
 import Container from "../layout/Container.js";
-
+import { Link } from "react-router-dom";
 import classes from "./PortfolioItem.module.css";
 
 function PortfolioItem(props) {
@@ -18,14 +18,19 @@ function PortfolioItem(props) {
         </div>
       </div>
       <div className={classes.mediaImage}>
-        <button>
+        <Link to={`/${encodeURIComponent(props.title.replace(/\s+/g, "-"))}`}>
           <img src={props.image} alt={props.title} />
-        </button>
+        </Link>
       </div>
       <div className={classes.container}>
         <div className={classes.info}>
           <div></div>
-          <button className={classes.view}>View the project</button>
+          <Link
+            to={`/${encodeURIComponent(props.title.replace(/%20/g, "-"))}`}
+            className={classes.view}
+          >
+            View the project
+          </Link>
         </div>
       </div>
     </Container>
