@@ -36,6 +36,15 @@ function ProjectPage({ projectData }) {
           <div className={classes.text}>{portfolio.description}</div>
         </div>
       </div>
+      <div className={classes.imageContainer}>
+        {portfolio.images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={portfolio.title + " image " + (index + 1)}
+          />
+        ))}
+      </div>
     </div>
   );
 }

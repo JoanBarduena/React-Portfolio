@@ -19,7 +19,7 @@ function PortfolioItem(props) {
       </div>
       <div className={classes.mediaImage}>
         <Link to={`/${encodeURIComponent(props.title.replace(/\s+/g, "-"))}`}>
-          <img src={props.image} alt={props.title} />
+          <img src={props.images[0]} alt={props.title} />
         </Link>
       </div>
       <div className={classes.container}>

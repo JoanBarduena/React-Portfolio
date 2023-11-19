@@ -9,8 +9,11 @@ const PORTFOLIO_DATA = [
     category: "First category",
     year: "2020",
     teamSize: "3",
-    image:
+    images: [
       "https://joanbarduena.github.io/portfolio/img/projects/portfolio_1.PNG",
+      "https://joanbarduena.github.io/portfolio/img/projects/portfolio_1.PNG",
+      "https://joanbarduena.github.io/portfolio/img/projects/portfolio_1.PNG",
+    ],
     description: "This is a first portfolio description",
   },
 ];
@@ -30,7 +33,7 @@ function AllPortfolios() {
           category={portfolio.category}
           year={portfolio.year}
           teamSize={portfolio.teamSize}
-          image={portfolio.image}
+          images={portfolio.images}
           description={portfolio.description}
         />
       ))}
