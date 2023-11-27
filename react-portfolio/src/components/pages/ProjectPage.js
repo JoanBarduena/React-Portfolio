@@ -1,6 +1,9 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
 import ProjectInfo from "./project_components/ProjectInfo.js";
 import classes from "./ProjectPage.module.css";
 
@@ -32,7 +35,9 @@ function ProjectPage({ projectData }) {
   return (
     <div className={classes.project}>
       <div className={classes.back}>
-        <Link to="/">&#8592;</Link>
+        <Link to="/">
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </Link>
       </div>
       <ProjectInfo project={portfolio} />
       <div className={classes.carrousel}>

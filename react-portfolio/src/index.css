@@ -96,5 +96,5 @@ a {
   font-weight: normal;
   text-decoration: none;
   color: inherit;
-  cursor: none;
+  /* cursor: none; */
 }
