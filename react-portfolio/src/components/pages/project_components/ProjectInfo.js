@@ -2,7 +2,7 @@ import classes from "./ProjectInfo.module.css";
 
 function ProjectInfo({ project }) {
   return (
-    <section>
+    <section className={classes.section}>
       <div className={classes.info}>
         <div className={classes.title}>
           <div>{project.title}</div>

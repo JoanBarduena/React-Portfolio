@@ -1,4 +1,4 @@
-section {
+.section {
   height: 100%;
   flex-direction: column;
   flex: 1;
@@ -7,7 +7,6 @@ section {
 }
 
 .info {
-  margin-right: 3em;
   width: 90%;
 }
 

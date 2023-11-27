@@ -1,4 +1,6 @@
 import Container from "../layout/Container.js";
+import Divider from "../layout/Divider.js";
+
 import { Link } from "react-router-dom";
 import classes from "./PortfolioItem.module.css";
 
@@ -13,6 +15,7 @@ function PortfolioItem(props) {
           <div>{props.subtitle}</div>
           <div className={classes.inline}>
             <div>{props.year}</div>
+            <div>&#47;</div>
             <div>{props.category}</div>
           </div>
         </div>
@@ -29,11 +32,8 @@ function PortfolioItem(props) {
       <div className={classes.container}>
         <div className={classes.info}>
           <div></div>
-          <Link
-            to={`/${encodeURIComponent(props.title.replace(/\s+/g, "-"))}`}
-            className={classes.view_project}
-          >
-            View the project
+          <Link to={`/${encodeURIComponent(props.title.replace(/\s+/g, "-"))}`}>
+            <Divider text1="view the" text2="project" />
           </Link>
         </div>
       </div>

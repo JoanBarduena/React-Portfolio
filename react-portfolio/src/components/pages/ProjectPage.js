@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 
-import ProjectInfo from "./projectComponents/ProjectInfo.js";
+import ProjectInfo from "./project_components/ProjectInfo.js";
 import classes from "./ProjectPage.module.css";
 
 function ProjectPage({ projectData }) {

@@ -78,22 +78,3 @@
 .title h4 {
   text-shadow: 0 0 10px var(--main-color);
 }
-
-.divider {
-  width: 50px;
-  margin: 10px;
-  border-top: 2px solid var(--color-main-medium);
-}
-
-.view_project {
-  text-decoration: none;
-  color: inherit;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.view_project:hover {
-  opacity: 0.7;
-}
