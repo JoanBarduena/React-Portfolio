@@ -17,9 +17,13 @@ function PortfolioItem(props) {
           </div>
         </div>
       </div>
-      <div className={classes.mediaImage}>
+      <div className={classes.images}>
         <Link to={`/${encodeURIComponent(props.title.replace(/\s+/g, "-"))}`}>
-          <img src={props.images[0]} alt={props.title} />
+          <img
+            src={props.images[0]}
+            alt={props.title}
+            className={classes.image}
+          />
         </Link>
       </div>
       <div className={classes.container}>
@@ -27,7 +31,7 @@ function PortfolioItem(props) {
           <div></div>
           <Link
             to={`/${encodeURIComponent(props.title.replace(/\s+/g, "-"))}`}
-            className={classes.view}
+            className={classes.view_project}
           >
             View the project
           </Link>

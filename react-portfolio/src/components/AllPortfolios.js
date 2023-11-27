@@ -11,8 +11,7 @@ const PORTFOLIO_DATA = [
     teamSize: "3",
     images: [
       "https://joanbarduena.github.io/portfolio/img/projects/portfolio_1.PNG",
-      "https://joanbarduena.github.io/portfolio/img/projects/portfolio_1.PNG",
-      "https://joanbarduena.github.io/portfolio/img/projects/portfolio_1.PNG",
+      "https://joanbarduena.github.io/portfolio/img/projects/portfolio_2.PNG",
     ],
     description: "This is a first portfolio description",
   },
