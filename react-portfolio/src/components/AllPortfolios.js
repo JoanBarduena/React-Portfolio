@@ -1,21 +1,6 @@
 import PortfolioItem from "./portfolios/PortfolioItem.js";
 import Container from "./layout/Container.js";
-
-const PORTFOLIO_DATA = [
-  {
-    id: "p1",
-    title: "Stylized Medieval Village",
-    subtitle: "First subtitle",
-    category: "First category",
-    year: "2020",
-    teamSize: "3",
-    images: [
-      "https://joanbarduena.github.io/portfolio/img/projects/portfolio_1.PNG",
-      "https://joanbarduena.github.io/portfolio/img/projects/portfolio_2.PNG",
-    ],
-    description: "This is a first portfolio description",
-  },
-];
+import { PORTFOLIO_DATA } from "./data/PortfolioData.js";
 
 function AllPortfolios() {
   return (

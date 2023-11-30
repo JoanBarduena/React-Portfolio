@@ -36,27 +36,41 @@ function ProjectPage({ projectData }) {
     <div className={classes.project}>
       <div className={classes.back}>
         <Link to="/">
-          <FontAwesomeIcon icon={faArrowLeft} />
+          <FontAwesomeIcon icon={faArrowLeft} size="sm" />
         </Link>
       </div>
       <ProjectInfo project={portfolio} />
       <div className={classes.carrousel}>
-        {portfolio.images.map((image, index) => (
-          <img
-            onClick={() => handleOpenModal(image)}
-            key={index}
-            src={image}
-            alt={portfolio.title + " image " + (index + 1)}
-            className={classes.image}
-          />
-        ))}
+        {portfolio.images.map((image, index) =>
+          image.type === "video" ? (
+            <video
+              className={classes.image}
+              controls
+              autoPlay
+              muted
+              loop
+              key={index}
+            >
+              <source src={image.url} type="video/mp4" />
+            </video>
+          ) : (
+            <img
+              onClick={() => handleOpenModal(image)}
+              key={index}
+              src={image.url}
+              alt={portfolio.title + " image " + (index + 1)}
+              className={classes.image}
+            />
+          )
+        )}
       </div>
+
       {openModal && (
         <div className={classes.modal} onClick={handleCloseModal}>
           <div className={classes.modalContent} onClick={handleModalClick}>
             {selectedImage && (
               <img
-                src={selectedImage}
+                src={selectedImage.url}
                 alt={selectedImage}
                 className={classes.modalImage}
               />
