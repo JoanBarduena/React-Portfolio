@@ -1,0 +1,24 @@
+.portfolioNav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+
+.portfolioNav nav {
+  display: flex;
+  padding-inline-start: 0;
+}
+
+.portfolioNav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.portfolioNav li {
+  display: block;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+}

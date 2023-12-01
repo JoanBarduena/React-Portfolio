@@ -22,11 +22,16 @@ function PortfolioItem(props) {
       </div>
       <div className={classes.images}>
         <Link to={`/${encodeURIComponent(props.title.replace(/\s+/g, "-"))}`}>
-          <img
-            src={props.images[0]}
-            alt={props.title}
-            className={classes.image}
-          />
+          {props.images.map((image, index) =>
+            image.type === "thumbnail" ? (
+              <img
+                src={image.url}
+                alt={props.title}
+                className={classes.image}
+                key={index}
+              />
+            ) : null
+          )}
         </Link>
       </div>
       <div className={classes.container}>
