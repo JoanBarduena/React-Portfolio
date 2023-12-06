@@ -29,7 +29,7 @@
 .portfolio {
   padding: 4em 0;
   position: relative;
-  border-bottom: 2px solid var(--secondary-color);
+  border-bottom: 2px solid black;
 
   opacity: 1;
   max-height: 1000px;

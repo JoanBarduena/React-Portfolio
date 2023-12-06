@@ -1,5 +1,6 @@
 import Container from "../layout/Container.js";
 import Divider from "../layout/Divider.js";
+import Image from "../functions/Image.js";
 
 import { Link } from "react-router-dom";
 import classes from "./PortfolioItem.module.css";
@@ -24,7 +25,7 @@ function PortfolioItem(props) {
         <Link to={`/${encodeURIComponent(props.title.replace(/\s+/g, "-"))}`}>
           {props.images.map((image, index) =>
             image.type === "thumbnail" ? (
-              <img
+              <Image
                 src={image.url}
                 alt={props.title}
                 className={classes.image}

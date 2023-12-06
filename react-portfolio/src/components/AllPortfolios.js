@@ -4,27 +4,32 @@ import PortfolioNav from "./portfolios/PortfolioNav.js";
 import { PORTFOLIO_DATA } from "./data/PortfolioData.js";
 
 function AllPortfolios() {
-  const allYears = PORTFOLIO_DATA.map((portfolio) => portfolio.year);
+  const portfolioItems = PORTFOLIO_DATA.map((portfolio) => (
+    <PortfolioItem
+      key={portfolio.id}
+      id={portfolio.id}
+      title={portfolio.title}
+      subtitle={portfolio.subtitle}
+      category={portfolio.category}
+      year={portfolio.year}
+      teamSize={portfolio.teamSize}
+      images={portfolio.images}
+      description={portfolio.description}
+    />
+  ));
+
+  const navigationInfo = PORTFOLIO_DATA.map((portfolio) => ({
+    category: portfolio.category,
+    years: portfolio.year,
+  }));
 
   return (
     <section>
       <Container>
         <h2>Projects</h2>
       </Container>
-      <PortfolioNav years={allYears} />
-      {PORTFOLIO_DATA.map((portfolio) => (
-        <PortfolioItem
-          key={portfolio.id}
-          id={portfolio.id}
-          title={portfolio.title}
-          subtitle={portfolio.subtitle}
-          category={portfolio.category}
-          year={portfolio.year}
-          teamSize={portfolio.teamSize}
-          images={portfolio.images}
-          description={portfolio.description}
-        />
-      ))}
+      <PortfolioNav info={navigationInfo} />
+      {portfolioItems}
     </section>
   );
 }

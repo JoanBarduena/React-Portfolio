@@ -2,18 +2,21 @@ import YearRange from "../functions/YearRange.js";
 import Container from "../layout/Container.js";
 import classes from "./PortfolioNav.module.css";
 
-function PortfolioNav({ years }) {
+function PortfolioNav({ info }) {
+  const allYears = info.map((item) => item.years).flat();
+  const categories = Array.from(new Set(info.map((item) => item.category)));
+
   return (
     <Container className={classes.portfolioNav}>
       <nav>
         <ul>
           <li>All</li>
-          <li>Web Design</li>
-          <li>Videogames</li>
-          <li>3D Art</li>
+          {categories.map((category) => (
+            <li>{category}</li>
+          ))}
         </ul>
       </nav>
-      <YearRange years={years} />
+      <YearRange years={allYears} />
     </Container>
   );
 }

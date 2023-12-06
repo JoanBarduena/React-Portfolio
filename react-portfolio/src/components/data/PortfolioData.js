@@ -36,7 +36,7 @@ export const PORTFOLIO_DATA = [
       },
       {
         type: "thumbnail",
-        url: "https://joanbarduena.github.io/portfolio/img/projects/jour_1.png",
+        url: "https://joanbarduena.github.io/portfolio/img/projects/jour_1.pg",
       },
       {
         type: "image",
