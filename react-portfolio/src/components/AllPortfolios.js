@@ -2,8 +2,15 @@ import PortfolioItem from "./portfolios/PortfolioItem.js";
 import Container from "./layout/Container.js";
 import PortfolioNav from "./portfolios/PortfolioNav.js";
 import { PORTFOLIO_DATA } from "./data/PortfolioData.js";
+import { useState } from "react";
 
 function AllPortfolios() {
+  const [category, setCategory] = useState("All");
+
+  const handleCategoryChange = (selectedCategory) => {
+    setCategory(selectedCategory);
+  };
+
   const portfolioItems = PORTFOLIO_DATA.map((portfolio) => (
     <PortfolioItem
       key={portfolio.id}
@@ -18,6 +25,11 @@ function AllPortfolios() {
     />
   ));
 
+  const filterPortfolioItems =
+    category === "All"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.props.category === category);
+
   const navigationInfo = PORTFOLIO_DATA.map((portfolio) => ({
     category: portfolio.category,
     years: portfolio.year,
@@ -28,8 +40,11 @@ function AllPortfolios() {
       <Container>
         <h2>Projects</h2>
       </Container>
-      <PortfolioNav info={navigationInfo} />
-      {portfolioItems}
+      <PortfolioNav
+        info={navigationInfo}
+        onChangeCategory={handleCategoryChange}
+      />
+      {filterPortfolioItems}
     </section>
   );
 }

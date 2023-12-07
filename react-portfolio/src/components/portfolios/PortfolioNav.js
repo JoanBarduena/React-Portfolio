@@ -2,7 +2,7 @@ import YearRange from "../functions/YearRange.js";
 import Container from "../layout/Container.js";
 import classes from "./PortfolioNav.module.css";
 
-function PortfolioNav({ info }) {
+function PortfolioNav({ info, onChangeCategory }) {
   const allYears = info.map((item) => item.years).flat();
   const categories = Array.from(new Set(info.map((item) => item.category)));
 
@@ -10,9 +10,9 @@ function PortfolioNav({ info }) {
     <Container className={classes.portfolioNav}>
       <nav>
         <ul>
-          <li>All</li>
+          <li onClick={() => onChangeCategory("All")}>All</li>
           {categories.map((category) => (
-            <li>{category}</li>
+            <li onClick={() => onChangeCategory(category)}>{category}</li>
           ))}
         </ul>
       </nav>
