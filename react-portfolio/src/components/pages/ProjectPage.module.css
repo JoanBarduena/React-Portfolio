@@ -142,7 +142,7 @@ video::-webkit-media-controls-fullscreen-button {
 .modalContent {
   margin: auto;
   display: block;
-  width: 65%;
+  width: 75%;
   transition: all 0.3s;
   user-select: none;
 }
@@ -158,7 +158,6 @@ video::-webkit-media-controls-fullscreen-button {
   position: absolute;
   top: 15px;
   right: 35px;
-  /* color: var(--secondary-color); */
   color: rgba(255, 255, 255);
   font-size: 40px;
   font-weight: bold;

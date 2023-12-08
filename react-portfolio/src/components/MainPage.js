@@ -6,11 +6,11 @@ function MainPage({ theme, toggleTheme }) {
     const root = document.documentElement;
     root.style.setProperty(
       "--secondary-color",
-      theme === "Dark" ? "#fafafa" : "#212121"
+      theme === "Dark" ? "250, 250, 250" : "33,33,33"
     );
     root.style.setProperty(
-      "--main-color",
-      theme === "Dark" ? "#212121" : "#fafafa"
+      "--primary-color",
+      theme === "Dark" ? "33,33,33" : "250, 250, 250"
     );
   }, [theme]);
 

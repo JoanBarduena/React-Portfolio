@@ -1,7 +1,7 @@
 .portfolioNav {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid var(--secondary-color);
+  border-bottom: 2px solid rgb(var(--secondary-color));
 }
 
 .portfolioNav nav {

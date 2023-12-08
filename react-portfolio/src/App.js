@@ -5,7 +5,7 @@ import ProjectPage from "./components/pages/ProjectPage.js";
 import { useState } from "react";
 
 function App() {
-  const [theme, setTheme] = useState("Light");
+  const [theme, setTheme] = useState("Dark");
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "Light" ? "Dark" : "Light"));
