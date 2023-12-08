@@ -1,7 +1,7 @@
 .divider {
   width: 50px;
   margin: 0 10px;
-  border-top: 2px solid red;
+  border-top: 2px solid var(--color-main-medium);
 }
 
 .view_project {

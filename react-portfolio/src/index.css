@@ -14,16 +14,6 @@
   --color-main-dark: #b86200;
 }
 
-[data-theme="Light"] {
-  --secondary-color: #212121;
-  --main-color: #fafafa;
-}
-
-[data-theme="Dark"] {
-  --secondary-color: #fafafa;
-  --main-color: #212121;
-}
-
 #root {
   height: 100%;
 }
